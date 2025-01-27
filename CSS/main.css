@@ -5,21 +5,21 @@
 
 :root {
     --text-color: white;
-    --bg-mobile : url(/IMG/bg-mobile.jpg);
+    --bg-mobile : url(./IMG/bg-mobile.jpg);
     --stroke-color : rgba(255, 255, 255, 0.5);
     --surface-color : rgba(255, 255, 255, 0.05);
     --surface-color-hover  : rgba(0, 0, 0, 0.2);
     --hightlight-color : rgba(255, 255, 255, 0.2);
-    --swith-bg-url : url(/IMG/moon-stars.svg);
+    --swith-bg-url : url(./IMG/moon-stars.svg);
 } 
 
 .light {
     --text-color : black;
-    --bg-mobile : url(/IMG/bg-mobile-light.jpg);
+    --bg-mobile : url(./IMG/bg-mobile-light.jpg);
     --stroke-color : rgba(0, 0, 0, 0.5);
     --surface-color : rgba(0, 0, 0, 0.05);
     --hightlight-color : rgba(0, 0, 0, 0.1);
-    --swith-bg-url : url(/IMG/sun.svg);
+    --swith-bg-url : url(./IMG/sun.svg);
 }
 
 body {
@@ -173,11 +173,11 @@ footer {
 
 @media (min-width: 700px) {
     :root {
-        --bg-url : url(/IMG/bg.jpg);
+        --bg-url : url(./IMG/bg.jpg);
     }
 
     .light {
-        --bg-url : url(/IMG/bg-light.jpg);
+        --bg-url : url(./IMG/bg-light.jpg);
     }
 }
 
