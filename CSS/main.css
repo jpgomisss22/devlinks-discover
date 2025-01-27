@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: white;
+    --bg-mobile : url(/IMG/bg-mobile.jpg);
+    --stroke-color : rgba(255, 255, 255, 0.5);
+    --surface-color : rgba(255, 255, 255, 0.05);
+    --surface-color-hover  : rgba(0, 0, 0, 0.2);
+    --hightlight-color : rgba(255, 255, 255, 0.2);
+    --swith-bg-url : url(/IMG/moon-stars.svg);
+} 
+
+.light {
+    --text-color : black;
+    --bg-mobile : url(/IMG/bg-mobile-light.jpg);
+    --stroke-color : rgba(0, 0, 0, 0.5);
+    --surface-color : rgba(0, 0, 0, 0.05);
+    --hightlight-color : rgba(0, 0, 0, 0.1);
+    --swith-bg-url : url(/IMG/sun.svg);
+}
+
+body {
+    background: var(--bg-mobile) no-repeat top center/cover;
+
+    font-family: "Inter" , sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 360px;
+    margin: 56px auto 0px;
+}
+
+#container a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px;
+}
+
+/* Button */
+
+#swith {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#swith button {
+    width: 32px;
+    height: 32px;
+    background: #fff var(--swith-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #swith button {
+   right: 0;
+   left: initial;
+} 
+
+#swith span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Lista */
+
+ul {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 24px 0;
+}
+
+ul li a {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    
+    padding: 24px 0;
+
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s;
+}
+
+#social-links a:hover {
+    background: var(--hightlight-color);
+    border-radius: 50%;
+    padding: 16px;
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
