@@ -78,12 +78,17 @@ body * {
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
 }
 
 .light #swith button {
-   right: 0;
-   left: initial;
+   animation: slide-in 0.4s forwards;
 } 
+
+#swith button:hover {
+    outline: 8px solid var(--hightlight-color);
+}
 
 #swith span {
     display: block;
@@ -173,5 +178,37 @@ footer {
 
     .light {
         --bg-url : url(/IMG/bg-light.jpg);
+    }
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    top {
+        left: 0;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
     }
 }
